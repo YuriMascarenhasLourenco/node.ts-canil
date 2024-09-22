@@ -18,5 +18,8 @@ server.use(helmet())
 
 //routes
 server.use(mainRoute)
+server.use((req,res)=>{
+    res.render('pages/404')
+})
 
 server.listen(process.env.PORT)
